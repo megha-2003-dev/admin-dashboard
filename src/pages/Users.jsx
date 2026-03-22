@@ -15,30 +15,34 @@ function Users() {
     if (loading) {
         return <p className="text-lg text-black">Loading Users....</p>
     }
+    const filteredUsers = users.filter((user) =>
+        user.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
     return (
         <div>
             <input className="border p-2 mb-4" type="text" placeholder="Search users...." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
-            <table className="table-auto border w-full">
+            <table className="table-auto border border-gray-300 rounded w-full">
                 <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Email</th>
+                    <tr className="border-b hover:bg-gray-100">
+                        <th className="p-2">Name</th>
+                        <th className="p-2">Email</th>
                     </tr>
                 </thead>
                 <tbody className="text-center">
-                    {users.filter((user) =>
-                        user.name.toLowerCase().includes(searchTerm.toLowerCase()))
-                        .map((user) => {
-                            return (
-                                <tr key={user.id}>
-                                    <td>{user.name}</td>
-                                    <td>{user.email}</td>
-                                </tr>
-                            )
-
-                        })
-
-                    }
+                    {filteredUsers.length === 0 ? (
+                        <tr>
+                            <td colSpan="2" className="p-4 text-center text-gray-500">
+                                No users found
+                            </td>
+                        </tr>
+                    ) : (
+                        filteredUsers.map((user) => (
+                            <tr key={user.id} className="border-b hover:bg-gray-100">
+                                <td className="p-2">{user.name}</td>
+                                <td className="p-2">{user.email}</td>
+                            </tr>
+                        ))
+                    )}
                 </tbody>
             </table>
         </div>
