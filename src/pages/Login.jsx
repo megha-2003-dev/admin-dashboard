@@ -4,7 +4,7 @@ function Login(){
     const navigate = useNavigate();
 
     return(
-        <div>
+        <div className="items-center text-center">
             <h1>Login Page</h1>
 
             <button onClick={() => navigate("/dashboard")} className="bg-blue-500 text-white px-4 py-2 mt-4">
