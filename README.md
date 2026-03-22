@@ -1,16 +1,85 @@
-# React + Vite
+# 🚀 Admin Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern Admin Dashboard built with **React, Tailwind CSS, and Vite**.
+This project demonstrates real-world frontend skills like API integration, search functionality, and data visualization.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌐 Live Demo
 
-## React Compiler
+👉 https://admin-dashboard-pied-psi-20.vercel.app/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📊 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* 🔐 Login UI with validation
+* 📊 Dashboard with analytics cards
+* 📈 Interactive charts using Recharts
+* 👥 User management (API integration)
+* 🔍 Search & filtering functionality
+* ⏳ Loading state handling
+* ❌ Empty state (No users found)
+* 🎨 Clean and responsive UI
+* 🚀 Deployed on Vercel
+
+---
+
+## 🛠️ Tech Stack
+
+![Tech Stack](https://skillicons.dev/icons?i=react,tailwind,js,vite)
+
+* React
+* Tailwind CSS
+* React Router
+* Axios
+* Recharts
+* Vercel
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+ ├── components/
+ ├── pages/
+ ├── layout/
+ ├── App.jsx
+ ├── main.jsx
+```
+
+---
+
+## 📡 API Used
+
+* https://jsonplaceholder.typicode.com/users
+
+---
+
+## ⚡ Installation
+
+```bash
+git clone https://github.com/megha-2003-dev/admin-dashboard.git
+cd admin-dashboard
+npm install
+npm run dev
+```
+
+---
+
+## 🧠 Learnings
+
+* Built reusable UI components
+* Integrated APIs using Axios
+* Implemented search and filtering
+* Managed UI states (loading, empty)
+* Added charts for data visualization
+* Deployed project using Vercel
+
+---
+
+## 📬 Contact
+
+👩‍💻 Megha Sharma
+🔗 https://github.com/megha-2003-dev
