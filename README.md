@@ -1,85 +1,92 @@
 # 🚀 Admin Dashboard
 
-A modern Admin Dashboard built with **React, Tailwind CSS, and Vite**.
-This project demonstrates real-world frontend skills like API integration, search functionality, and data visualization.
+A modern Admin Dashboard built with **React, Tailwind CSS, Vite, and the GitHub REST API**.  
+Demonstrates real-world frontend skills — API integration, custom hooks, search/filtering, loading skeletons, and data visualization.
+
+🔗 **Live Demo:** https://admin-dashboard-pied-psi-20.vercel.app/
 
 ---
 
-## 🌐 Live Demo
+## ✨ Features
 
-👉 https://admin-dashboard-pied-psi-20.vercel.app/
-
----
-
-## 📊 Features
-
-* 🔐 Login UI with validation
-* 📊 Dashboard with analytics cards
-* 📈 Interactive charts using Recharts
-* 👥 User management (API integration)
-* 🔍 Search & filtering functionality
-* ⏳ Loading state handling
-* ❌ Empty state (No users found)
-* 🎨 Clean and responsive UI
-* 🚀 Deployed on Vercel
+- 🔐 Login UI with inline field validation
+- 📊 Dashboard with live stats cards from GitHub API
+- 📈 Interactive bar chart (Recharts) built from real API data
+- 👥 User management table with avatars, type badges, and profile links
+- 🔍 Real-time search & filtering
+- ⏳ Skeleton loading states
+- ❌ Error state with retry button
+- 🧩 Custom `useUsers` hook for clean data fetching
+- 🔒 Environment-based API config with `.env`
+- 📱 Responsive layout
 
 ---
 
 ## 🛠️ Tech Stack
 
-![Tech Stack](https://skillicons.dev/icons?i=react,tailwind,js,vite)
-
-* React
-* Tailwind CSS
-* React Router
-* Axios
-* Recharts
-* Vercel
+| Layer | Technologies |
+|---|---|
+| Frontend | React, Vite, Tailwind CSS |
+| Routing | React Router DOM |
+| Data Fetching | Axios, Custom Hook |
+| Charts | Recharts |
+| API | GitHub REST API |
+| Deployment | Vercel |
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Structure
 
 ```
 src/
- ├── components/
- ├── pages/
- ├── layout/
- ├── App.jsx
- ├── main.jsx
+├── components/
+│   ├── Chart.jsx           # Bar chart using real API data
+│   └── DashboardCard.jsx   # Reusable stats card
+├── hooks/
+│   └── useUsers.js         # Custom hook for GitHub API fetching
+├── layout/
+│   └── DashboardLayout.jsx # Sidebar + navbar layout
+├── pages/
+│   ├── Dashboard.jsx       # Overview with cards and chart
+│   ├── Login.jsx           # Login with validation
+│   └── Users.jsx           # Users table with search
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## ⚙️ Run Locally
+
+```bash
+git clone https://github.com/megha-2003-dev/admin-dashboard.git
+cd admin-dashboard
+npm install
+```
+
+Create a `.env` file:
+```
+VITE_API_BASE_URL=https://api.github.com
+```
+
+```bash
+npm run dev
 ```
 
 ---
 
 ## 📡 API Used
 
-* https://jsonplaceholder.typicode.com/users
+**GitHub REST API** — `https://api.github.com/users`  
+Returns real GitHub user profiles including avatars, usernames, type, and profile URLs. No authentication required.
 
 ---
 
-## ⚡ Installation
+## 👩‍💻 Author
 
-```bash
-git clone https://github.com/megha-2003-dev/admin-dashboard.git
-cd admin-dashboard
-npm install
-npm run dev
-```
+**Megha Sharma**  
+GitHub: https://github.com/megha-2003-dev
 
 ---
 
-## 🧠 Learnings
-
-* Built reusable UI components
-* Integrated APIs using Axios
-* Implemented search and filtering
-* Managed UI states (loading, empty)
-* Added charts for data visualization
-* Deployed project using Vercel
-
----
-
-## 📬 Contact
-
-👩‍💻 Megha Sharma
-🔗 https://github.com/megha-2003-dev
+⭐ If you found this project useful, consider giving it a star!
